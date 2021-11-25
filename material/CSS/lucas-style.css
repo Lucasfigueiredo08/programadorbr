@@ -1,0 +1,46 @@
+/* #id */
+/* .classe */
+/* seletor{} */
+
+.liInsta {
+    list-style-image: url(../imagens/Insta.png);
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+.liTwitter {
+    list-style-image: url(../imagens/Twitter.png);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+li{
+
+}
+
+.liYoutube {
+    list-style-image: url(../imagens/Youtube.png);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.div {
+    padding: 20px;
+    margin: 40px;
+}
+
+.name{
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+body{
+    background-image: url(../imagens/backgorund.png);
+    height: 200px;
+    width: 400px;  
+    background-repeat: no-repeat;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}

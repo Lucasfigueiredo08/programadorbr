@@ -1,0 +1,31 @@
+ul{
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+    background-color: #f3e;
+    /* list-style-image: url("...") ; */
+    /* list-style-type: square; */
+    /* circle, square, disc */
+}
+
+ol{
+    list-style-type: lower-roman;
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+
+    background-color: #59e;
+    /* none, upper-roman, lower-roman, lower-alpha, upper-alpha */
+}
+
+li{
+    border: 1px solid;
+    background-color: yellow;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a {
+    /* text-decoration: none; */
+}

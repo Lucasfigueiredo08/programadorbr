@@ -1,0 +1,153 @@
+/* Seletor (pode ser o nome da tag ou outro nome*/
+body{
+    
+}
+
+/* #paragrafos {  */
+    /* color: blue; */
+    /* color: red; */
+    /* color: blue; */
+
+    /* background-image: url("../fundos/tile2.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover;  */
+    /* background-position: center; */
+    /* background-attachment: fixed;  */     /* outras opções : scroll ou local */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+
+    /* background: url(../fundos/tile2.jpg) center/cover no-repeat fixed; */
+
+    /* background-color: #00FFFF;
+} */
+
+/* .subDiv {
+    background-color: yellow;
+} */
+/* id */
+
+/* p {
+    text-decoration: underline;
+    text-decoration: line-through;
+} */
+
+#titulo {
+    color: #FF0000;
+    /* color: rgb(255, 255, 0) */
+}
+
+/* classe */
+.texto_verde {
+    color: green;
+}
+
+#base {
+    height: 10px;
+    background-color: red;
+}
+
+#container {
+    background-color: blue;
+    color: white;
+    /* margin-top: 10px;
+    margin-left: 10px; */
+    /* margin: 10px; */
+    /* padding-top: 10px; */
+
+}
+
+/* #cm {
+    background-color: blue;
+    width: 1cm;
+    height: 1cm;
+}
+
+#mm{
+    background-color: red;
+    width: 1mm;
+    height: 1mm;
+}
+
+#in{
+    background-color: blue;
+    width: 1in;
+    height: 1in;
+}
+
+#px{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+}
+
+#pt{
+    background-color: blue;
+    width: 10pt;
+    height: 10pt;
+}
+
+#pc{
+    background-color: red;
+    width: 1pc;
+    height: 1pc;
+} */
+
+/* html{
+    font-size: 20px;
+} */
+
+/* .container {
+    /* font-size: 200px; */
+    /* width: 200px; */
+    /* width: 50vw; */
+    /* width: 50vh; */
+    /* width: 50vmin; */
+    /* width: 50vmax; */
+    /*width: 80%;*/ /*80% do elemento pai, no caso o html*/
+    /* background: red; */
+
+    /* width: 300px;
+    background: red; */
+/* }  */
+
+/* .inside {
+    width: 80%; /* 80% do elemento pai, no caso o container */
+    /* background: blue; */
+
+    /* font-size: 2em; */
+    /* font-size: 2rem; */
+/* 
+    width: 1em;
+    background:blue; */
+/* }  */
+
+.links {
+    text-decoration: none; 
+    /* color: red; white; */
+    /* cursor: crosshair; */ /* uma cruz */
+    /* background: red; */
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+
+.links:visited{ /* altera as propriedades do link visitado */
+    color: blue;
+}
+
+/* Manipula o elementom quando é passado
+o mouse por cima
+ */
+.links:hover{
+    background: #bc2035;
+    color: white;
+}
+
+/* Executa ações no botão quando clicado */
+.links:active{
+
+    background: yellow;
+    color:white;
+}
