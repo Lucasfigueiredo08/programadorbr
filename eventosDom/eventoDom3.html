@@ -17,10 +17,16 @@
 
             t.addEventListener("mouseover", mudarText);
 
+            t.addEventListener("mouseout", mouseout);
+
         }
 
         function mudarText(){
             this.innerHTML = "Novo Teste";
+        }
+
+        function mouseout(){
+            this.innerHTML = "Mouse fora do elemento";
         }
         
     </script>
