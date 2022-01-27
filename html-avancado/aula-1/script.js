@@ -14,7 +14,14 @@
 
 let lista = document.getElementById("lista");
 
-let num = parseInt(lista.getAttribute("num"));
+lista.dataset.n = 6
+
+let id = parseInt(lista.getAttribute("data-id"));
+console.log(id);
+
+let num = parseInt(lista.getAttribute("data-n"));
+
+console.log(lista.dataset.n)
 
 let conteudo = ""
 
