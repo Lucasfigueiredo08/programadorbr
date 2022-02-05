@@ -1,0 +1,52 @@
+/* pseudo elementos */
+
+h1::first-letter{
+    color:blue;
+    font-size: 5rem;
+}
+
+p::first-line{
+    color: red;
+}
+
+/* p::first-letter{
+    color: yellow;
+    font-size: 5rem;
+} */
+
+li{
+    /* margin-left: 200px; */
+    list-style: none;
+    /* list-style-image: url("./download.jfif"); */
+}
+
+/* li::before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./imagens/download.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* color: blue;
+    font-size: 20px; 
+} */
+
+li::after{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./imagens/download.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* color: blue;
+    font-size: 20px; */
+}
+
+p::selection{
+    background-color: yellow;
+    color: black;
+}   
