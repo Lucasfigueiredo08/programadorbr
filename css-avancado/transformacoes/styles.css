@@ -1,0 +1,9 @@
+div {
+    width: 420px;
+    height: 300px;
+    /* transform: rotate(45deg); */
+    /* transform: scale(2); */
+    transform: skew(30deg, 30deg) scale(0.7,1 );
+
+    background-color: red;
+}
