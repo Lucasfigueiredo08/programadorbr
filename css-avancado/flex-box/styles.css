@@ -1,33 +1,51 @@
 .container {
     display: flex;
+    align-items: flex-end;
     /* flex-direction: column-reverse; */
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* flex-wrap: wrap-reverse; */
     /* flex-flow: column wrap; */
 
-    justify-content: space-around;
-    align-items: stretch;
+    /* justify-content: space-around; */
+    /* align-items: stretch; */
+    /* align-items: flex-end; */
+    /* align-content: center; */
+    /* align-content: flex-start; */
 
     background-color: darkgray;
-    height: 400px;
+    height: 750px;
     color: white;
 }
+/* 
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left
+
+align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end */
 
 
 .r1{
-background-color: red;
+    /* order: 2; */
+    background-color: red;
+    /* flex-grow: 1; */
+
 }
 
 .r2{
-background-color: blue;
+    /* order:3; */
+    background-color: blue;
+    /* flex-grow: 2; */
+    align-self: flex-start;
+
 }
 
 .r3{
-background-color: green;
+    /* order: 1; */
+    /* flex-grow: 3; */
+    background-color: green;
+    /* flex-shrink: 0; */
 }
 
 .rect{
-    width: 200px;
-    /* height: 200px; */
+    width: 250px;
+    height: 100px;
 }
