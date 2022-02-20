@@ -15,3 +15,6 @@ dobro = dobro.bind(numero)
 
 numero.d()
 // console.log(numero.d());
+
+
+
