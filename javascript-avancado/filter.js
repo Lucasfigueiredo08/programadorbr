@@ -10,9 +10,9 @@ function novoAluno(nome, idade){
 
 let alunos = [
     novoAluno("Maria", 23),
-    novoAluno("Maria", 23),
-    novoAluno("Maria", 23),
-    novoAluno("Maria", 23),
+    novoAluno("Maria", 33),
+    novoAluno("Maria", 43),
+    novoAluno("Maria", 253),
 ]
 
 let jogadores = [
@@ -50,4 +50,24 @@ function filtro(callback){
 console.log(filtro(temMaisde30))
 
 */
+
+// function nomeIdade(aluno) {
+//     // return aluno.nome + " tem " + aluno.idade + " anos";
+//     return {
+//         nome: aluno.nome,
+//         idade: aluno.idade
+//     }
+// }
+
+// console.log(alunos.map(nomeIdade))
+
+
+// valor e referencia
+    // let alunoA = {nome: "Igor", idade: 15}
+
+    // let alunoB = {...alunoA}
+    // let alunoB = Object.assign({}, alunoA)
+
+    // alunoB.idade = 25;
+
 
