@@ -14,7 +14,8 @@ function handleClick(event){
 
     if(handleMove(position)){
         setTimeout(() => {
-            alert("Temos um vencedor - Jogador: " + playerTime);
+            alert("Temos um vencedor - Jogador: " + playerTime + " Sequencia: " + seqWinner);
+            document.location.reload(true);
         }, 10)
     };
 
