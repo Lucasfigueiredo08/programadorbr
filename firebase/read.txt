@@ -1,0 +1,9 @@
+//backend do google
+
+#servidor backend
+
+#permite funcionalidades de backedn - conjunto de códigos
+
+#armazenamento, funções
+
+#md
