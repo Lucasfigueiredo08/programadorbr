@@ -8,4 +8,24 @@ var config = {
     appId: "1:604545120369:web:788e89985e7e724b23c3d0",
     measurementId: "G-5QE0E7EZ9N"
   };
+  // versão antiga do firebase
 firebase.initializeApp(config);
+
+let db = firebase.firestore();
+
+// ler todos os dados da minha coleção
+// db.collection("turmaA").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         let aluno = doc.data();
+//         console.log(aluno.nome);
+//     });
+// })
+
+// trazendo um documento especifico
+let docRef = db.collection("turmaA").doc("hK8dOBnXkcTOwwhRaeD0");
+
+docRef.get().then((doc) => {
+  // let aluno = doc.data();
+  console.log(doc.data().nome);
+})
+
