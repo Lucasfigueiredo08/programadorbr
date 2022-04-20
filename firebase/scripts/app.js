@@ -22,10 +22,44 @@ let db = firebase.firestore();
 // })
 
 // trazendo um documento especifico
-let docRef = db.collection("turmaA").doc("hK8dOBnXkcTOwwhRaeD0");
+// let docRef = db.collection("turmaA").doc("hK8dOBnXkcTOwwhRaeD0");
 
-docRef.get().then((doc) => {
-  // let aluno = doc.data();
-  console.log(doc.data().nome);
+// docRef.get().then((doc) => {
+//   // let aluno = doc.data();
+//   console.log(doc.data().nome);
+// })
+// db.collection("turmaA").where("nome", "==", "Lucas").get()
+// .then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//       let aluno = doc.data();
+//       console.log(aluno.nome, aluno.sobrenome);
+//     })
+// })
+
+// db.collection("turmaA").where("nome", ">=", "Lucas").get()
+// .then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//       let aluno = doc.data();
+//       console.log(aluno.nome, aluno.sobrenome);
+//     })
+// })
+
+// db.collection("turmaA").where("nome", ">=", "Lucas")
+// .where("nome", "<=", "Teste")
+
+// .get()
+// .then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//       let aluno = doc.data();
+//       console.log(aluno.nome, aluno.sobrenome);
+//     })
+// })
+
+db.collection("turmaA").where("notas.nota1", ">", 5)
+.get()
+.then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      let aluno = doc.data();
+      console.log(aluno.nome, aluno.sobrenome);
+    })
 })
-
