@@ -29,12 +29,12 @@ let db = firebase.firestore();
 //   console.log("Erro ao criar documento: " + err);   
 // })
 // ler todos os dados da minha coleção
-db.collection("turmaA").onSnapshot((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        let aluno = doc.data();
-        console.log(aluno);
-    });
-})
+// db.collection("turmaA").onSnapshot((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         let aluno = doc.data();
+//         console.log(aluno);
+//     });
+// })
 
 // trazendo um documento especifico
 // let docRef = db.collection("turmaA").doc("hK8dOBnXkcTOwwhRaeD0");
@@ -78,3 +78,20 @@ db.collection("turmaA").onSnapshot((querySnapshot) => {
 //       console.log(aluno.nome, aluno.sobrenome);
 //     })
 // })
+
+//atualizar
+// db.collection(TURMA).doc('hK8dOBnXkcTOwwhRaeD0').update({
+//     faltas: firebase.firestore.FieldValue.increment(1)
+// }).then(() => {
+//     console.log("Documento atualizado com sucesso!");
+// }).catch(err => {
+//     console.log("Erro ao atualizar documento: " + err);
+// });
+// //apagar
+// db.collection(TURMA).doc('hK8dOBnXkcTOwwhRaeD0').delete().then(() => {
+//     console.log("Documento apagado com sucesso!");
+// }).catch(err => {
+//     console.log("Erro ao apagar documento: " + err);    
+// })
+
+// criando usuários no firebase
