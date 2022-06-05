@@ -32,18 +32,19 @@ function login(){
     let userEmail = "novoteste@teste.com";
     let userPassword = "123abc";
 
-    auth.signInWithEmailAndPassword(userEmail, userPassword).then(loggedUser => {
-        // console.log(loggedUser);
-        console.log(auth.currentUser);
+
+    auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(() => {
+        auth.signInWithEmailAndPassword(userEmail, userPassword).then(loggedUser => {
+            // console.log(loggedUser);
+            console.log(auth.currentUser);
+        }).catch(error => {
+            console.log(error);
+        });
     }).catch(error => {
         console.log(error);
-    });
-};
+    })
 // login();
-
-// let user = auth.currentUser;
-// console.log(user);
-
+};
 auth.onAuthStateChanged(user => {
    if (user) {
          console.log(user);
@@ -60,4 +61,4 @@ function logout(){
     });
 }
 
-setTimeout(login, 2000)
+setTimeout(logout, 2000)
