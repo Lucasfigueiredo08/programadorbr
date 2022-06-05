@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
     <style>
-        #square {
+        #red {
             width: 500px;
             height: 500px;
             background-color: red;
             /* display: none; */
+            position: absolute;
+            display: none;
         }
 
         #green {
@@ -18,6 +20,7 @@
             height: 300px;
             background-color: green;
             position: absolute;
+
         }
     </style>
 </head>
@@ -27,9 +30,9 @@
 
     <div id="square" ></div> -->
 
-    <button id="button">animate</button>
+    <button id="button">hide</button>
     <div id="green"></div>
-    <div id="sqaure"></div>
+    <div id="red"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -38,14 +41,14 @@
         // $('#button').click(function(){
         //     $('#square').fadeTo(1000,0.5);
         // });
+        // function callBack(){
+        //     console.log('Green escondido');
+        // }
         
         $("button").click(() => {
-            $("#button").click(() => {
-                $("#green").animate({
-                    width: 500,
-                    height: 500
-                }, 3000);
-            })
+                $("#green").hide(2000, function callBack() {
+                    $("#red").show(2000);
+                });
         })
 
 
