@@ -32,6 +32,14 @@
   // console.log($("#novo").attr("name"))
 
   // $("#lista1").find("[key=2]").remove();
+  // $("li").remove(".item2 , .item4")
+// let lista1 = $("#lista1")
+
+// let items = lista1.html()
+
+// lista1.html(item + "<li> novo item </li>")
+
+// lista1.prepend("<li>Novo teste</li>") // after, before, append
 
 
 
