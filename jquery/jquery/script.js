@@ -43,5 +43,21 @@
 
 
 
+// setTimeout(() => {
+//   $("h1").toggleClass("bg-blue")
+// }, 3000);
+
+// setInterval(() => {
+//   $("h1").toggleClass("bg-blue")
+// }, 300);
+
+$("h1").toggle("bg-blue");
+
+$("h1").css({
+  "background-color":"blue",
+  "font-size": "50px"
+});
+
+
 
 
