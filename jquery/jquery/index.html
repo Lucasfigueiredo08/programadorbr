@@ -9,27 +9,27 @@
     <title>Jquery</title>
 </head>
 <body>
-
-    <div>
-        <div id="div1" >Div 1</div>
-        <div id="div2" >Div 2</div>
-        <div id="div3" >Div 3</div>
-        <div id="div4" >Div 4</div>
-        <div id="div5" >Div 5</div>
+    <div id="container1">
+        <div class="div1"  id="div1" >Div 1</div>
+        <div class="div2" id="div2" >Div 2</div>
+        <div class="div1" id="div3" >Div 3</div>
+        <div class="div2" id="div4" >Div 4</div>
+        <div class="div1" id="div5" >Div 5</div>
     </div>
 
-    <div>
-        <div id="div6" >Div 6</div>
-        <div id="div7" >Div 7</div>
-        <div id="div8" >Div 8</div>
-        <div id="div9" >Div 9</div>
-        <div id="div10" >Div 10</div>
+    <div id="container2">
+        <div class="div2"  id="div6" >Div 6</div>
+        <div class="div1" id="div7" >Div 7</div>
+        <div class="div2" id="div8" >Div 8</div>
+        <div class="div1" id="div9" >Div 9</div>
+        <div class="div2" id="div10" >Div 10</div>
     </div>
 
     <script>
 
-        let selected = $("#div5").prevUntil("#div2");
-        console.log(selected);
+        let selected = $("#container2").children().eq(2)
+
+        console.log(selected)
     
     </script>
 
