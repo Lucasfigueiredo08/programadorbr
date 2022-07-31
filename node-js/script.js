@@ -12,7 +12,29 @@ if(args[0] == 'mult') {
 } else if(args[0] == 'sub') { 
     c = calc.sub(a, b)
  } else if(args[0] == 'sum') {
-     c = calc.soma(a,b) 
+     c = calc.sum(a,b)
+} else if(args[0] == 'sen') {
+        c = calc.sen(a,b) 
+} else if(args[0] == 'cos') {
+        c = calc.cos(a,b) 
+} else if(args[0] == 'tan') {
+        c = calc.tan(a,b) 
+} else if(args[0] == 'cot') {
+        c = calc.cot(a,b) 
+} else if(args[0] == 'sec') {
+        c = calc.sec(a,b) 
+} else if(args[0] == 'asen') {
+        c = calc.asen(a,b) 
+} else if(args[0] == 'asec') {
+        c = calc.asec(a,b) 
+} else if(args[0] == 'acos') {
+        c = calc.acos(a,b) 
+} else if(args[0] == 'atan') {
+        c = calc.atan(a,b) 
+} else if(args[0] == 'acot') {
+        c = calc.acot(a,b) 
+} else if(args[0] == 'csc') {
+        c = calc.csc(a,b) 
     } else {
          c = "Operação inválida"
 }
