@@ -2,27 +2,50 @@
  const url = require('url');
  const fs = require('fs');
 
- http.createServer((request, response) => {
-   //  response.writeHead(200, {'Content-Type': 'application/json'});
-   //  response.end(JSON.stringify({texto: "<h1>Hello World</h1>"}));
-
-   let path = url.parse(request.url).pathname;
+ function handleFile(req, res, callback) {
+   
+   let path = url.parse(req.url).pathname;
    
 
-   if(path == "" || path == "/") { 
-       path = "/index.html";
-   }
+   // if(path == "" || path == "/") { 
+   //     path = "/index.html";
+   // }
    let fileName = "." + path;
 
    fs.readFile(fileName, (err, data) => {
      if (err) {
-       response.writeHead(404, {'Content-Type': 'text/html;charset=utf-8'});
-       response.end("<h1>404 Not Found</h1>");
+
+       if(callback) {
+         if(!callback(req, res)) {
+            res.writeHead(404, {'Content-Type': 'text/html;charset=utf-8'});
+            res.end("<h1>404 Not Found</h1>");
+         };
+       }
+
      } else {
-       response.writeHead(200, {'Content-Type': 'text/html'});
-       response.end(data);
+       res.writeHead(200, {'Content-Type': 'text/html'});
+       res.end(data);
+       res.end();
      }
    });
+
+}
+
+function handleRequest(req, res) {
+   let path = url.parse(req.url).pathname;
+
+   if(path == "/teste"){
+      res.end("Teste");
+      return true;
+   }
+   return false;
+}
+
+ http.createServer((request, response) => {
+   //  response.writeHead(200, {'Content-Type': 'application/json'});
+   //  response.end(JSON.stringify({texto: "<h1>Hello World</h1>"}));
+
+   handleFile(request, response, handleRequest);
 
    }).listen(3000, (err) => {
     if (err) {
