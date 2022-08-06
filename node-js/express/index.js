@@ -1,32 +1,21 @@
 const express = require('express');
-const path = require('path');
+var app = express();
+var bodyParser = require('body-parser');
 
-const app = express();
+let consoleBody = (req, res, next) => {
+        console.log(req.body);
+        next();
+}
 
-const PORT = 5000;
+let hello = (req, res) => {
 
-app.use("/meusite", express.static(path.join(__dirname, 'client')));
+        res.send("<h1>Hello World</h1>");
+}
 
-app.get('/', (req, res) => {
-        // res.type("html");
-        res.send("<h1>Hello World from GET</h1>");
-})
+app.use("/", bodyParser.json());
+app.use("/", consoleBody);
+app.get("/", hello)
 
-app.post('/', (req, res) => {
-        // res.type("html");
-        res.send("<h1>Hello World from POST</h1>");
-})
+app.post("/", hello)
 
-app.put('/', (req, res) => {
-        // res.type("html");
-        res.send("<h1>Hello World from PUT</h1>");
-})
-
-app.delete('/', (req, res) => {
-        // res.type("html");
-        res.send("<h1>Hello World from DELETE</h1>");
-})
-
-app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-})
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
