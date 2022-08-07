@@ -14,6 +14,10 @@ module.exports = {
     postNew(title, description) {
         this.posts.push({id: generateId(), title, description})
 
+    },
+    deletePost(id) {
+        console.log(id)
+        this.posts = this.posts.filter(post => post.id !== id);
     }
 
 }
