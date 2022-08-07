@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const posts = require('../model/posts');
+const { application } = require('express');
 const router = express.Router()
 
 
@@ -18,14 +19,32 @@ router.post("/new", bodyParser.json(), (req, res) => {
     res.send("Post adicionado com sucesso");
 })
 
-router.delete("/delete", bodyParser.json(), (req, res) => {
+// funcionando
+// router.delete("/delete", bodyParser.json(), (req, res) => {
 
-    let id = req.body.id;
+//     let id = req.query.id;
 
+//     posts.deletePost(id);
+
+//     res.send("Post deletado com sucesso");
+// })
+
+// router.del("/delete/:id", bodyParser.json(), (req, res) => {
+
+//     let id = req.query.id;
+
+//     posts.deletePost(id);
+
+//     res.send("Post deletado com sucesso");
+// })
+
+router.delete("/delete/:id", bodyParser.json(), (req, res) => {
+    let id = req.params.id;
     posts.deletePost(id);
-
     res.send("Post deletado com sucesso");
 })
+
+
 
 
 module.exports = router;

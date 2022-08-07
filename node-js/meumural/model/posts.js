@@ -2,9 +2,9 @@ module.exports = {
 
     posts: [
         {
-            id: 'erstes',
-            title: 'Erstes Post',
-            description: 'Das ist das erste Post'
+            id: '1',
+            title: 'Esse vai ser apagado',
+            description: 'Testando o delete'
         }
     ],
 
@@ -16,12 +16,14 @@ module.exports = {
 
     },
     deletePost(id) {
-        console.log(id)
-        this.posts = this.posts.filter(post => post.id !== id);
-    }
+        console.log("Entrou aqui")
+        return this.posts = this.posts.filter(post => post.id !== id);
+    },
+
 
 }
 
 function generateId() {
-    return Math.random().toString(36).substring(2,9);
+
+    return Math.floor(Math.random() * 10);  //.toString(36);.substring(2,9);
 }
