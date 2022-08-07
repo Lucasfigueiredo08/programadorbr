@@ -1,26 +1,23 @@
 const PORT = 3000;
 const express = require('express');
 const bodyParser = require('body-parser');
+const posts = require('./model/posts');
 
 const app = express();
 
-let posts = [
-    {
-        id: 'erstes',
-        title: 'Erstes Post',
-        description: 'Das ist das erste Post'
-    }
-]
+
 
 app.get("/all", (req, res) => {
-    res.json(posts);
+    res.json(JSON.stringify(posts.getAll()));
 })
 
 app.post("/new", bodyParser.json(), (req, res) => {
-    let id = generateId();
+
     let title = req.body.title;
     let description = req.body.description;
-    posts.push({id, title, description})
+
+    posts.postNew(title, description);
+
     res.send("Post adicionado com sucesso");
 })
 
