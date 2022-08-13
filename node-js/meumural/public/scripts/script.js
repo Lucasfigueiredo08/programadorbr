@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function updatePosts() {
 
-    fetch("http://localhost:3000/api/all").then(res => {
+    fetch("http://192.168.0.5:3000/api/all").then(res => {
         return res.json()
     }).then(data => {
         // console.log(res);
@@ -12,7 +12,7 @@ function updatePosts() {
 
             let posts = JSON.parse(data);
             posts.forEach(post => {
-                let postElement = `<div id=${post.id} class="card md-4">
+                let postElement = `<div id=${post.id} class="card mb-4">
                                         <div class="card-header">
                                             <h5 class="card-title">${post.title}</h5>
                                         </div>
@@ -28,10 +28,10 @@ function updatePosts() {
    
 }
 
-function newPosts() {
-    let title = document.getelementById('title').value;
-    let description = document.getelementById('desc').value;
-
+function newPost() {
+    let title = document.getElementById('title').value;
+    let description = document.getElementById('desc').value;
+    
     let post = { title, description };
 
     const options = {
@@ -40,9 +40,10 @@ function newPosts() {
         body: JSON.stringify(post)
     }
 
-    fetch("http://localhost:3000/api/new", options).then(res => {
+    fetch("http://192.168.0.5:3000/api/new", options).then(res => {
+        console.log(res);
         updatePosts();
-        document.getElementById.apply("title").value = "";
-        document.getElementById.apply("desc").value = "";
+        document.getElementById("title").value = "";
+        document.getElementById("desc").value = "";
     })
 }
