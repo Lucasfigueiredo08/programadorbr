@@ -5,6 +5,11 @@ module.exports = {
             id: '1',
             title: 'Esse vai ser apagado',
             description: 'Testando o delete'
+        },
+        {
+            id: '2',
+            title: 'Esse vai ser apagado 2',
+            description: 'Testando o delete'
         }
     ],
 
