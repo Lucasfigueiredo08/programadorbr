@@ -43,6 +43,9 @@ router.post("/new", bodyParser.json(), (req, res) => {
 //     res.send("Post deletado com sucesso");
 // })
 
+// funcionando com query params ?id=1
+// route params :id
+// body params /delete  
 router.delete("/delete/:id", bodyParser.json(), (req, res) => {
     let id = req.params.id;
     posts.deletePost(id);
