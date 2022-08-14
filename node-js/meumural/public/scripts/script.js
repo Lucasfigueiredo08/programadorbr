@@ -22,7 +22,7 @@ function updatePosts() {
                                         <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                                     </div>`        
                 postElements += postElement;
-                // console.log("post id: ", post.id);
+                console.log("post id: ", post.id);
             })
 
             document.getElementById('posts').innerHTML = postElements;
@@ -42,12 +42,15 @@ function newPost() {
         body: JSON.stringify(post)
     }
 
+    if(!title == "" && !description == ""){
     fetch("http://192.168.0.5:3000/api/new", options).then(res => {
         // console.log(res);
-        updatePosts();
-        document.getElementById("title").value = "";
-        document.getElementById("desc").value = "";
-    })
+            updatePosts();
+            document.getElementById("title").value = "";
+            document.getElementById("desc").value = "";
+    })}else{
+        alert("Preencha todos os campos");
+    }
 }
 
 function deletePost() { //id
