@@ -4,12 +4,15 @@ const path = require('path');
 const app = express();
 
 let users = [{
+    id: 0,
     name: 'John Doe',
     phone: '+3809912345678',
 }, {
+    id: 1,
     name: 'Jane Doe',
     phone: '+3809987654321',
 }, {
+    id: 2,
     name: 'Jack Doe',
     phone: '+3809976543210',
 }];
