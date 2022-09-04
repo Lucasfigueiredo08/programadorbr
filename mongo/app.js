@@ -25,17 +25,16 @@ const linkSchema = new mongoose.Schema({
 
 const Link = mongoose.model('Link', linkSchema)
 
-let link = new Link({
-    title: 'Lucas Figueiredo 3',
-    description: 'Twitter do Lucas 2',
-    url:'http://twitter.com/lucasfigueiredo008',
-})
-
-link.save().then(doc => {
-    console.log(doc)
-}).catch(err => {
-    console.log(err)
-})
+// let link = new Link({
+//     title: 'Lucas Figueiredo 3',
+//     description: 'Twitter do Lucas 2',
+//     url:'http://twitter.com/lucasfigueiredo008',
+// })
+// link.save().then(doc => {
+//     console.log(doc)
+// }).catch(err => {
+//     console.log(err)
+// })
 
 mongoose.connect('mongodb://localhost/newLinks', {
     useNewUrlParser: true, 
@@ -50,6 +49,19 @@ db.on("error", () => {
 
 db.once("open", () => {
     console.log("deu certo")
+
+    app.get('/:title', async (req, res) =>{
+
+        let title = req.params.title;
+
+        try{
+            let doc = await Link.findOne({title})
+            res.redirect(doc.url);
+        }catch(error){
+            console.log(error);
+        }
+
+    })
 })
 
 app.get('/', (req, res) => {
