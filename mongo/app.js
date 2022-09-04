@@ -16,7 +16,28 @@ const mongoose = require('mongoose')
 //     console.log(error)
 // })  
 
-mongoose.connect('mongodb://localhost/links', {
+const linkSchema = new mongoose.Schema({
+    title: {type: String, required: true },
+    description: String,
+    url: {type: String, required: true},
+    click: {type: Number, default: 0}
+})
+
+const Link = mongoose.model('Link', linkSchema)
+
+let link = new Link({
+    title: 'Lucas Figueiredo 3',
+    description: 'Twitter do Lucas 2',
+    url:'http://twitter.com/lucasfigueiredo008',
+})
+
+link.save().then(doc => {
+    console.log(doc)
+}).catch(err => {
+    console.log(err)
+})
+
+mongoose.connect('mongodb://localhost/newLinks', {
     useNewUrlParser: true, 
     useUnifiedTopology: true
 })
